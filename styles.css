@@ -1,0 +1,284 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.mode-switcher {
+    margin-top: 20px;
+}
+
+.mode-switcher button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+#start-btn{
+    width:100px;
+    height: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #f8f8ff;
+    border: 3px solid #a1a1a1;
+    font-size: 14px;
+    font-weight: 700;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/011/964/890/original/vibe-play-logo-designs-concept-music-vibe-logo-template-vector.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+#start-btn:active{
+    border: 3px solid #0055b3;
+}
+#restart-btn{
+    width:100px;
+    height: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #f8f8ff;
+    border: 3px solid #a1a1a1;
+    font-size: 14px;
+    font-weight: 700;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/011/964/890/original/vibe-play-logo-designs-concept-music-vibe-logo-template-vector.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+#restart-btn:active{
+    border: 3px solid #0055b3;
+}
+
+
+/* Sections */
+.section {
+    display: non;
+    padding: 20px;
+    text-align: center;
+}
+
+.section.active {
+    display: block;
+}
+.fuck{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+/* Player Section */
+.player-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+
+.card {
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    text-align: center;
+    width: 80vw;
+}
+
+.card img {
+    width: 70%;
+    border-radius: 20px;
+}
+
+.playlist-card .albums {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.album {
+    cursor: pointer;
+}
+
+.album img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+#waveform-canvas {
+    width: 60%;
+    height: 100px;
+    display: block;
+    background-color: transparent;
+}
+.card-player-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vibe{
+    width: 180px;
+}
+
+
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;;
+    width: 70vw;
+}
+
+.prev-button,
+.play-button,
+.next-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #8f8f8f;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#progress-bar {
+    flex-grow: 2;
+    margin: 0 15px;
+}
+
+#volume-control {
+    width: 50px;
+}
+
+
+
+/* Light Mode */
+body.light-mode {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.light-mode .card {
+    background-color: #fff;
+    color: #333;
+}
+
+.light-mode .mode-switcher button {
+    background-color: #e0e0e0;
+    color: #333;
+}
+.light-mode header h2{
+    color: #333;
+}
+.light-mode header h1{
+    color: #0055b3;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+.dark-mode .card {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.dark-mode .mode-switcher button {
+    background-color: #444;
+    color: #f5f5f5;
+}
+.dark-mode header h2{
+    color: #f8f8ff;
+}
+.dark-mode header h1{
+    color: #0055b3;
+}
+.dark-mode #start-btn{
+    color: #8f8f8f;
+    border: 3px solid #333;  
+}
+.dark-mode #start-btn:active{
+    border: 3px solid #2febe1;
+}
+.dark-mode #restart-btn{
+    color: #8f8f8f;
+    border: 3px solid #333;  
+}
+.dark-mode #restart-btn:active{
+    border: 3px solid #2febe1;
+}
+
+/* Blue Mode */
+body.blue-mode {
+    background-color: #010e55;
+    color: #cce7ff;
+}
+
+.blue-mode .card {
+    background-color: #f8f8ff;
+    color: #333;
+}
+
+.blue-mode .mode-switcher button {
+    background-color: #0055b3;
+    color: #cce7ff;
+}
+.blue-mode header .sus{
+    color: #0055b3;
+}
+
+.blue-mode #start-btn{
+    color: #cce7ff;
+    border: 3px solid #0055b3;  
+}
+.blue-mode #start-btn:active{
+    border: 3px solid #9423a3;
+}
+.blue-mode #restart-btn{
+    color: #cce7ff;
+    border: 3px solid #0055b3;  
+}
+.blue-mode #restart-btn:active{
+    border: 3px solid #9423a3;
+}
+
+
+
+@media screen and (max-width: 767px){
+    .mode-switcher button {
+        padding: 5px 10px;
+        font-size: 8px;
+    }
+    #section3 h2{
+        font-size: 1em;
+    }
+    #restart-btn{
+        width: 50px;
+        height: 20px;
+
+    }
+}

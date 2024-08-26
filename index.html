@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <header>
+        <h2 class="sus">Music Player App</h2>
+        <h1>Playio.</h1>
+        <div class="mode-switcher">
+            <button id="light-mode">Light Mode</button>
+            <button id="dark-mode">Dark Mode</button>
+            <button id="blue-mode">Blue Mode</button>
+        </div>
+    </header>
+
+    <!-- Section 1: Welcome Screen -->
+    <div id="section1" class="section">
+        <h2>Welcome to Playio</h2>
+        <img src="/assets/musicman.png" alt="">
+        <button id="start-btn">Start</button>
+    </div>
+
+    <!-- Section 2: Music Player -->
+    <div id="section2" class="section" style="display: none;">
+        <div class="fuck">
+        <div class="card headphone-card">
+            <img src="/assets/headphones.png" alt="Headphones">
+            <p>Playio: Listen to your favorite tracks.</p>
+        </div>
+        <div class="card playlist-card">
+            <h2>Top Hits</h2>
+            <p>Recently Played</p>
+            <div class="albums">
+                <div class="album" data-src="/assets/Justin Bieber - Intentions ft. Quavo.mp3">
+                    <img src="/assets/INTENTIONS-JUSTIN-BIEBER.png" alt="Album 1">
+                    <p>Justin Bieber - Intentions ft. Quavo</p>
+                </div>
+                <div class="album" data-src="/assets/Justin Bieber - Yummy.mp3">
+                    <img src="assets/yummy.jpg" alt="Album 2">
+                    <p>Justin Bieber - Yummy</p>
+                </div>
+                <div class="album" data-src="/assets/justin_bieber_love_yourself.mp3">
+                    <img src="/assets/love.jpeg" alt="Album 3">
+                    <p>Justin Bieber - Love Yourself</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="card-player-card">
+            <img class="vibe" src="/assets/vibe.jpeg" alt="Current Track">
+            <h3 id="current-track-title">Current Track: Relaxing Lofi</h3>
+            <canvas id="waveform-canvas"></canvas>
+            <div class="controls">
+                <button class="prev-button" id="prev-track-btn">&#9664;&#9664;</button>
+                <button class="play-button" id="play-pause-btn">Play</button>
+                <button class="next-button" id="next-track-btn">&#9654;&#9654;</button>
+                <input type="range" id="progress-bar" value="0" min="0" max="100" step="1">
+                <input type="range" id="volume-control" value="100" min="0" max="100">
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <!-- Section 3: Conclusion -->
+    <div id="section3" class="section" style="display: none;">
+        <h2>Thank you for using Playio!</h2>
+        <button id="restart-btn">PLAY</button>
+    </div>
+
+    <audio id="audio-player" src=""></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
